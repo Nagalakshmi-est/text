@@ -14,12 +14,14 @@ import {
 } from "@chakra-ui/react";
 import { Badge, HStack, Icon, } from "@chakra-ui/react"
 import { FcLike } from "react-icons/fc";
+import { TiHeartFullOutline } from "react-icons/ti";
+import { GoHeartFill } from "react-icons/go";
 
 import { HiStar } from "react-icons/hi"
 import { Grid } from "@chakra-ui/react"
 import spaimg from '../../Images/Spa.png'
 import { PiHeartThin } from "react-icons/pi";
-
+import { useNavigate } from "react-router-dom";
 import { IoLocationOutline } from "react-icons/io5";
 
 const data = [
@@ -141,7 +143,7 @@ const BeautyCards = () => {
 
 
 
-
+    const navigate = useNavigate()
     return (
 
         <>
@@ -154,7 +156,7 @@ const BeautyCards = () => {
                     lg: "repeat(4, 1fr)"
                 }} gap="6">
                     {data.map((dev) => (
-                        <Box maxW='350px' borderWidth="1px" borderRadius='2xl'>
+                        <Box maxW='350px' borderWidth="1px" borderRadius='2xl' onClick={() => navigate('/spadetails')} >
 
 
                             <Image src={spaimg} borderRadius='2xl' height='140px' width='330px' />
@@ -166,8 +168,7 @@ const BeautyCards = () => {
                                         <Text fontWeight="medium" color="fg"> {dev.title}    </Text>
 
                                         <Spacer />
-                                        <Icon as={FcLike} boxSize={4} ml='80px' color='brown' />
-
+                                        <GoHeartFill color="#8B4513" style={{ marginLeft: '90px' }} />
                                     </HStack>
 
 

@@ -1,0 +1,221 @@
+import React from 'react'
+import Navbar from './Navbar'
+import { Flex, HStack, Button, Menu, Portal, Stack, InputGroup, Input, Box, Text, Image, Card, Grid, Spacer } from '@chakra-ui/react'
+import { LuSearch } from "react-icons/lu"
+import { GrLocation } from "react-icons/gr";
+import { TbRefresh } from "react-icons/tb";
+import img from '../Images/Day Spa.png'
+import { FaArrowRightLong } from "react-icons/fa6";
+import makeupimg from '../Images/Makeupbanner.png'
+import halfmakeup from '../Images/HalfMakeup.png'
+import { MdArrowDropDown } from "react-icons/md";
+import BeautyCards from './HomePage/BeautyCards';
+
+
+
+const Images = [
+    { id: 1, title: "Day Spa" },
+    { id: 2, title: "Destination Spa" },
+    { id: 3, title: "Wellness Spa" },
+    { id: 4, title: "Medical Spa" },
+    { id: 5, title: "Wellness Spa" },
+    { id: 6, title: "Wellness Spa" },
+
+]
+const Imagecircle = [
+    { id: 1, title: "Day Spa" },
+    { id: 2, title: "Destination Spa" },
+    { id: 3, title: "Wellness Spa" },
+    { id: 4, title: "Medical Spa" },
+    { id: 5, title: "Wellness Spa" },
+    { id: 6, title: "Wellness Spa" },
+    { id: 7, title: "Wellness Spa" },
+    { id: 8, title: "Wellness Spa" },
+    { id: 9, title: "Wellness Spa" },
+
+]
+const Services = () => {
+    return (
+
+        <> <Navbar />
+
+
+            <Flex justify="center" mt={{ base: '60px', md: '80px', lg: '80px' }} >
+                <HStack
+                    flexDir={{ base: 'column', md: 'row', lg: 'row' }}
+                    maxW="700px"
+                    w="100%"
+                > <InputGroup startElement={<GrLocation color="#8B4513" />}>
+                        <Input placeholder="1208,Spline Arcade,flat no1..." borderRadius='lg' w='250px' background='gray.100' _placeholder={{ color: "#8B4513" }} />
+                    </InputGroup>
+
+                    <InputGroup startElement={<LuSearch />} ml='-80px' >
+                        <Input placeholder="Search Services..." borderRadius='lg' background='white' />
+                    </InputGroup>
+
+                    <Button w='100px' background='gray.100' color='#8B4513' borderRadius='lg'>Clinic< TbRefresh />   </Button>
+                </HStack>
+            </Flex>
+
+
+
+            <Box w="100%" maxW="1200px" mx="auto" >
+                <HStack mt='20px' flexDir={{ base: 'column', md: 'row', lg: 'row' }}><Text fontWeight='bold' fontSize='30px'>Services</Text>
+                    <Spacer />
+                    <HStack> <Text fontSize='20px'>View all</Text>
+                        <FaArrowRightLong />
+                    </HStack></HStack>
+
+                <Box
+                    display="flex"
+                    gap={8}
+                    flexWrap="nowrap"
+                    justifyContent="flex-start"
+                    alignItems="center"
+                    flexGrow={1}
+                    overflow="hidden"
+                    flexDir={{ base: 'column', md: 'row', lg: 'row' }}
+                >
+                    {Images.map((data) => (
+                        <Box
+                            key={data.id}
+                            mt='30px'
+                            position="relative"
+                            borderRadius="md"
+                            overflow="hidden"
+
+                            flexShrink={1}     // allow shrinking if container is smaller
+                        >
+                            <Image
+                                src={img}
+                                alt={data.title}
+                                w="180px"
+                                h="120px"
+                                objectFit="cover"
+                                borderRadius="3xl"
+                            />
+                            <Text
+                                position="absolute"
+                                bottom="0"
+                                width="100%"
+                                color="white"
+                                textAlign="center"
+                                background='black'
+                                py={1}
+                                borderBottomRadius="3xl"
+                            >
+                                {data.title}
+                            </Text>
+                        </Box>
+                    ))}
+                </Box>
+
+
+                <Box mt="40px" maxW="1200px" w="100%" mx="auto"  >
+                    <Flex gap={4} flexDir={{ base: 'column', md: 'row', lg: 'row' }}>
+                        <Image src={makeupimg} />
+                        <Image src={halfmakeup} ml='-10px' w='460px' borderTopLeftRadius="4xl"
+                            borderBottomLeftRadius="4xl" />  </Flex>
+                </Box>
+
+                <HStack mt='20px' flexDir={{ base: 'column', md: 'row', lg: 'row' }}><Text fontWeight='bold' fontSize='30px'>Premium Spa</Text>
+                    <Spacer />
+                    <HStack> <Text fontSize='20px'>View all</Text>
+                        <FaArrowRightLong />
+                    </HStack></HStack>
+            </Box>
+            <Box
+                maxW="1200px" w="100%" mx="auto"
+                display="flex"
+                gap={10}
+                flexWrap="nowrap"
+                justifyContent="flex-start"
+                alignItems="center"
+                flexGrow={1}
+                overflow="hidden"
+            >
+                {Imagecircle.map((data) => (
+                    <Box
+                        key={data.id}
+                        mt='30px'
+                        position="relative"
+                        borderRadius="md"
+                        overflow="hidden"
+
+                        flexShrink={1}     // allow shrinking if container is smaller
+                    >
+                        <Image
+                            src={img}
+                            alt={data.title}
+                            w="100px"
+                            h="100px"
+                            objectFit="cover"
+                            borderRadius='full'
+                        />
+
+                    </Box>
+                ))}
+            </Box>
+            <Box maxW="1200px" w="100%" mx="auto" >
+                <HStack mt='30px' flexDir={{ base: 'column', md: 'row', lg: 'row' }}>
+                    <Text> Filters</Text>
+
+                    <HStack flexDir={{ base: 'column', md: 'row', lg: 'row' }}>
+
+
+                        <Menu.Root>
+                            <Menu.Trigger asChild>
+                                <Button variant="outline" borderRadius='full' borderColor="#8B4513" ml='20px' height='30px'>
+                                    Sort <MdArrowDropDown color="#8B4513" />
+                                </Button>
+                            </Menu.Trigger>
+                            <Portal>
+                                <Menu.Positioner>
+                                    <Menu.Content>
+                                        <Menu.Item value="new-txt">New Text File</Menu.Item>
+                                        <Menu.Item value="new-file">New File...</Menu.Item>
+                                        <Menu.Item value="new-win">New Window</Menu.Item>
+                                        <Menu.Item value="open-file">Open File...</Menu.Item>
+                                        <Menu.Item value="export">Export</Menu.Item>
+                                    </Menu.Content>
+                                </Menu.Positioner>
+                            </Portal>
+                        </Menu.Root>
+
+
+                        <Button variant="outline" borderRadius='full' borderColor="#8B4513" height='30px'>
+                            Discounts
+                        </Button>
+                        <Menu.Root>
+                            <Menu.Trigger asChild>
+                                <Button variant="outline" borderRadius='full' borderColor="#8B4513" height='30px'>
+                                    Gender <MdArrowDropDown color="#8B4513" />
+                                </Button>
+                            </Menu.Trigger>
+                            <Portal>
+                                <Menu.Positioner>
+                                    <Menu.Content>
+                                        <Menu.Item value="new-txt">Male</Menu.Item>
+                                        <Menu.Item value="new-file"> Female</Menu.Item>
+
+                                    </Menu.Content>
+                                </Menu.Positioner>
+                            </Portal>
+                        </Menu.Root>
+
+                        <Button variant="outline" borderRadius='full' borderColor="#8B4513" height='30px'>
+                            Top Ratings
+                        </Button>
+                    </HStack>
+
+                </HStack>
+            </Box>
+
+            <BeautyCards />
+
+        </>
+
+    )
+}
+
+export default Services

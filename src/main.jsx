@@ -10,7 +10,7 @@ import HomePage from './assets/components/HomePage/HomePage'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Provider>
-      <HomePage />
+      <App />
     </Provider>
 
   </StrictMode>
