@@ -59,7 +59,7 @@ const Services = () => {
 
 
 
-            <Box w="100%" maxW="1200px" mx="auto" >
+            <Box w="100%" maxW="1250px" mx="auto" >
                 <HStack mt='20px' flexDir={{ base: 'column', md: 'row', lg: 'row' }}><Text fontWeight='bold' fontSize='30px'>Services</Text>
                     <Spacer />
                     <HStack> <Text fontSize='20px'>View all</Text>
@@ -111,10 +111,10 @@ const Services = () => {
                 </Box>
 
 
-                <Box mt="40px" maxW="1200px" w="100%" mx="auto"  >
+                <Box mt="40px" maxW="1250px" w="100%" mx="auto"  >
                     <Flex gap={4} flexDir={{ base: 'column', md: 'row', lg: 'row' }}>
                         <Image src={makeupimg} />
-                        <Image src={halfmakeup} ml='-10px' w='460px' borderTopLeftRadius="4xl"
+                        <Image src={halfmakeup} w={{ base: '300px', md: '400px', lg: '490px' }} borderTopLeftRadius="4xl"
                             borderBottomLeftRadius="4xl" />  </Flex>
                 </Box>
 
@@ -125,7 +125,7 @@ const Services = () => {
                     </HStack></HStack>
             </Box>
             <Box
-                maxW="1200px" w="100%" mx="auto"
+                maxW="1250px" w="100%" mx="auto"
                 display="flex"
                 gap={10}
                 flexWrap="nowrap"

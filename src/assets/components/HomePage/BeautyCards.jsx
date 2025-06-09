@@ -16,7 +16,7 @@ import { Badge, HStack, Icon, } from "@chakra-ui/react"
 import { FcLike } from "react-icons/fc";
 import { TiHeartFullOutline } from "react-icons/ti";
 import { GoHeartFill } from "react-icons/go";
-
+import offerImg from '../../Images/offer.png'
 import { HiStar } from "react-icons/hi"
 import { Grid } from "@chakra-ui/react"
 import spaimg from '../../Images/Spa.png'
@@ -148,18 +148,35 @@ const BeautyCards = () => {
 
         <>
 
-            <Box maxW="1200px" w="100%" mx="auto" mt={10}>
+            <Box maxW="1250px" w="100%" mx="auto" mt={10}>
                 <Grid templateColumns={{
                     base: "repeat(1, 1fr)",
                     sm: "repeat(2, 1fr)",
                     md: "repeat(2, 1fr)",
-                    lg: "repeat(4, 1fr)"
+                    lg: "repeat(3, 1fr)",
+                    xl: "repeat(4, 1fr)"
                 }} gap="6">
                     {data.map((dev) => (
                         <Box maxW='350px' borderWidth="1px" borderRadius='2xl' onClick={() => navigate('/spadetails')} >
 
 
-                            <Image src={spaimg} borderRadius='2xl' height='140px' width='330px' />
+                            <Box position="relative" borderRadius="2xl" overflow="hidden">
+                                <Image src={spaimg} borderRadius="2xl" height="140px" width="100%" objectFit="cover" />
+                                <Box
+                                    position="absolute"
+                                    bottom='1'
+                                    left="2"
+                                    fontSize='small'
+                                    color="#25B701"
+                                    px="2"
+                                    py="1"
+                                    borderRadius="md"
+
+                                >
+                                    <HStack>  <Image src={offerImg} />
+                                        Flat 10% Off above value of 200 </HStack>
+                                </Box>
+                            </Box>
 
                             <Box p="4" >
                                 <VStack align="start" spacing={2}>
@@ -168,7 +185,7 @@ const BeautyCards = () => {
                                         <Text fontWeight="medium" color="fg"> {dev.title}    </Text>
 
                                         <Spacer />
-                                        <GoHeartFill color="#8B4513" style={{ marginLeft: '90px' }} />
+                                        <GoHeartFill color="#B7995B" style={{ marginLeft: '90px' }} />
                                     </HStack>
 
 

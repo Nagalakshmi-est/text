@@ -26,7 +26,7 @@ import towl from '../../Images/towl.png'
 import beauty from '../../Images/beauty.png'
 import group from '../../Images/Group.png'
 import BeautyCards from './BeautyCards';
-import { GoArrowRight } from "react-icons/go";
+import { FaArrowRightLong } from "react-icons/fa6";
 import Navbar from '../Navbar';
 import { useNavigate } from 'react-router-dom';
 
@@ -51,7 +51,7 @@ const HomePage = () => {
             </Flex>
 
 
-            <Box maxW="1200px" w="100%" mx="auto" mt="60px" >
+            <Box maxW="1250px" w="100%" mx="auto" mt="60px" >
                 <HStack gap='80px' flexDir={{ base: 'column', md: 'row' }}>
                     <Card.Root width={{ base: '300px', md: '360px', lg: "360px" }} height={{ base: '170px', md: '210px', lg: "170px" }} borderRadius="4xl" onClick={() => navigate('/services')}>
                         <Card.Body gap="5px">
@@ -108,14 +108,14 @@ const HomePage = () => {
                 </HStack>
             </Box>
 
-            <Box maxW="1200px" w="100%" mx="auto" mt={10}>
+            <Box maxW="1250px" w="100%" mx="auto" mt={10}>
                 <Image src={group} alt="Group" w="100%" objectFit="cover" borderRadius="xl" />
             </Box>
-            <HStack maxW="1200px" w="100%" mx="auto" mt='30px' mb='20px'>
+            <HStack maxW="1250px" w="100%" mx="auto" mt='30px' mb='20px'>
                 <Text fontSize='30px' fontWeight='bold'>Featured</Text>
                 <Spacer />
                 <Text>View all</Text>
-                <GoArrowRight />
+                <FaArrowRightLong color='#C1A15F' />
             </HStack>
 
 
