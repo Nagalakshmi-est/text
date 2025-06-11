@@ -1,0 +1,21 @@
+.custom-swiper {
+    padding-bottom: 40px;
+    /* Give space for dots below images */
+    position: relative;
+}
+
+.custom-swiper .swiper-pagination {
+    bottom: 10px !important;
+    /* Adjust this to move dots further down */
+}
+
+.custom-swiper .swiper-pagination-bullet {
+    background-color: #f0d0bd;
+    /* Brown color */
+    opacity: 1;
+}
+
+.custom-swiper .swiper-pagination-bullet-active {
+    background-color: #5e4325;
+    /* Darker brown for active dot */
+}

@@ -158,7 +158,7 @@ const BeautyCards = () => {
                     xl: "repeat(4, 1fr)"
                 }} gap="6" >
                     {data.map((dev) => (
-                        <Box maxW='350px' borderWidth="1px" borderRadius='2xl' onClick={() => navigate('/spadetails')} >
+                        <Box maxW='350px' position="relative" overflow="hidden" borderWidth="1px" borderRadius='2xl' onClick={() => navigate('/spadetails')} >
 
 
                             {/* <Box position="relative" borderRadius="2xl" overflow="hidden" >
@@ -200,8 +200,8 @@ const BeautyCards = () => {
                                     bottom="0"
                                     left="0"
                                     right="0"
-                                    height="30px"  // Adjust height for more/less black area
-                                    bg="blackAlpha.700"  // Semi-transparent black
+                                    height="100%"  // Adjust height for more/less black area
+                                    bg="linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent 60%)"
                                 />
 
                                 {/* Glass Effect Text (Positioned Over Black Background) */}
@@ -214,8 +214,7 @@ const BeautyCards = () => {
                                     px="3px"
                                     py="2px"
                                     borderRadius="md"
-                                    bg="rgba(255, 255, 255, 0.15)"  // Glass transparency
-                                    backdropFilter="blur(1px)"       // Frosted effect
+                                    bg="rgba(255, 255, 255, 0.01)" backdropFilter="blur(1px)"       // Frosted effect
                                 >
                                     <HStack>
 

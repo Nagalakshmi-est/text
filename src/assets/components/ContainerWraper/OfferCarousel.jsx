@@ -4,6 +4,8 @@ import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import usecode from '../../Images/UseCode.png';
+import './OfferCarousel.css'
+
 
 const OfferCarousel = () => {
     const offerData = [
@@ -36,12 +38,14 @@ const OfferCarousel = () => {
     }
 
     return (
-        <Box width="100%" maxW="1024px" mx="auto">
+        <Box width="100%" >
             <Swiper
+
                 spaceBetween={10}
                 slidesPerView={1}
+                className="custom-swiper"
                 autoplay={{
-                    delay: 2500,
+                    delay: 2000,
                     reverseDirection: false,
                     disableOnInteraction: false,
                 }}

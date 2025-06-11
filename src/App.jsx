@@ -8,6 +8,8 @@ import DocStaff from './assets/components/ServiceTabs/DocStaff'
 import GalleryTab from './assets/components/ServiceTabs/GalleryTab'
 import Reviews from './assets/components/ServiceTabs/Reviews'
 import AboutUs from './assets/components/ServiceTabs/AboutUs'
+import SpaModal from './assets/components/ContainerWraper/SpaModal'
+import SalonPage from './assets/components/SalonPage'
 
 
 const App = () => {
@@ -22,6 +24,9 @@ const App = () => {
         <Route path='/gallery' element={< GalleryTab />} />
         <Route path='/reviews' element={< Reviews />} />
         <Route path='/aboutus' element={< AboutUs />} />
+        <Route path='/modal' element={< SpaModal />} />
+        <Route path='/services/salon' element={< SalonPage />} />
+
 
       </Routes>
 

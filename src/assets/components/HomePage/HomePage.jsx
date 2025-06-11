@@ -15,6 +15,7 @@ import {
 } from '@chakra-ui/react';
 
 import { Image } from '@chakra-ui/react';
+import { IoMdArrowDropdown } from "react-icons/io";
 
 import { FiHome, FiSearch, FiVideo, FiShoppingCart, FiUser } from 'react-icons/fi';
 import { InputGroup } from "@chakra-ui/react"
@@ -43,11 +44,13 @@ const HomePage = () => {
         <ContainerWrapper>
             <Navbar />
             <Flex justify="center" mt={{ base: '60px', md: '100px', lg: '100px' }}>
+
                 <HStack
                     flexDir={{ base: "column", md: "row", lg: "row" }}
                     maxW="600px"
                     w="100%"
-                > <InputGroup startElement={<GrLocation color="#8B4513" />}>
+                >
+                    <InputGroup startElement={<GrLocation color="#8B4513" />} >
                         <Input placeholder="1208,Spline Arcade,flat no1..." borderRadius='lg' w='250px' background='gray.100' _placeholder={{ color: "#8B4513" }} />
                     </InputGroup>
 
@@ -115,7 +118,7 @@ const HomePage = () => {
                 </HStack>
             </Box>
 
-            <Box w="100%" mx="auto" mt={10}>
+            <Box mt={10}>
                 {/* <Image src={group} alt="Group" w="100%" objectFit="cover" borderRadius="xl" /> */}
                 <ImageCarousel images={images} />
             </Box>

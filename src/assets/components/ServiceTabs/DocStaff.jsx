@@ -26,7 +26,7 @@ const DocStaff = () => {
             }} gap="6">
                 {
                     Staff.map((data) => (
-                        <><Box background='white' p='10px' >
+                        <><Box background='white' p='10px' boxShadow='sm' >
 
                             <VStack gap={0}> <Image src={doctorImg} h='80px' />
                                 <Text fontSize='lg' fontWeight='semibold'>{data.name}</Text>

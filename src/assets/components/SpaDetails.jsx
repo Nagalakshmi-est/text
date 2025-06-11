@@ -109,8 +109,7 @@ const SpaDetails = () => {
                         </VStack>
                     </Box>
                     <Tabs.Root defaultValue="services" mt='40px' >
-
-                        <Tabs.List>
+                        <Box bg='white' p='20px' boxShadow='xl' borderRadius='xl' >  <Tabs.List>
 
                             <Tabs.Trigger value="services" >
                                 Services
@@ -128,7 +127,8 @@ const SpaDetails = () => {
                                 About Us
                             </Tabs.Trigger>
 
-                        </Tabs.List>
+                        </Tabs.List></Box>
+
                         <Tabs.Content value="services">
 
                             <ServiceDetails />

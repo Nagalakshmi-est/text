@@ -6,6 +6,7 @@ import { GrLocation } from "react-icons/gr";
 import { TbRefresh } from "react-icons/tb";
 import img from '../Images/Day Spa.png'
 import { FaArrowRightLong } from "react-icons/fa6";
+
 // import makeupimg from '../Images/Makeupbanner.png'
 // import halfmakeup from '../Images/HalfMakeup.png'
 import { MdArrowDropDown } from "react-icons/md";
@@ -16,6 +17,7 @@ import ContainerWrapper from './ContainerWraper/ContainerWraper';
 import slide1 from '../Images/Group.png'
 import slide2 from '../Images/Group.png'
 import slide3 from '../Images/Group.png'
+import SpaModal from './ContainerWraper/SpaModal';
 
 const images = [slide1, slide2, slide3];
 
@@ -62,7 +64,8 @@ const Services = () => {
                         <Input placeholder="Search Services..." borderRadius='lg' background='white' />
                     </InputGroup>
 
-                    <Button w='100px' background='gray.100' color='#8B4513' borderRadius='lg'>Clinic< TbRefresh />   </Button>
+                    <SpaModal />
+                    {/* <Button w='100px' background='gray.100' color='#8B4513' borderRadius='lg'>Clinic< TbRefresh />   </Button> */}
                 </HStack>
             </Flex>
 
@@ -205,6 +208,7 @@ const Services = () => {
                                     <Menu.Content>
                                         <Menu.Item value="new-txt">Male</Menu.Item>
                                         <Menu.Item value="new-file"> Female</Menu.Item>
+                                        <Menu.Item value="new-file"> Children</Menu.Item>
 
                                     </Menu.Content>
                                 </Menu.Positioner>
