@@ -11,6 +11,8 @@ import GirlIcon from '../../Images/Girlicon.png'
 import { Accordion, Span } from "@chakra-ui/react"
 import { PiDotOutlineFill } from "react-icons/pi";
 import { LuSearch } from "react-icons/lu"
+import './Service.css'
+
 
 const Images = [
     { id: 1, title: "Day Spa" },
@@ -31,40 +33,100 @@ const ServiceDetails = () => {
                 justifyContent="flex-start"
                 alignItems="center"
                 flexGrow={1}
-                overflow="hidden"
                 flexDir={{ base: 'column', md: 'row', lg: 'row' }}
+                p='20px'
             >
                 {Images.map((data) => (
-                    <Box
-                        key={data.id}
-                        mt='30px'
-                        position="relative"
-                        borderRadius="md"
-                        overflow="hidden"
+                    // <Box
+                    //     position="relative"
+                    //     w="180px"
+                    //     h="120px"
+                    //     borderRadius="3xl"
+                    //     overflow="hidden"
+                    //     mt="30px"
+                    //     flexShrink={1}
+                    // >
+                    //     <Image
+                    //         src={img}
+                    //         alt={data.title}
+                    //         w="100%"
+                    //         h="100%"
+                    //         objectFit="cover"
+                    //         borderRadius="3xl"
+                    //     />
 
-                        flexShrink={1}     // allow shrinking if container is smaller
-                    >
-                        <Image
-                            src={img}
-                            alt={data.title}
-                            w="180px"
-                            h="120px"
-                            objectFit="cover"
-                            borderRadius="3xl"
-                        />
-                        <Text
-                            position="absolute"
-                            bottom="0"
-                            width="100%"
-                            color="white"
-                            textAlign="center"
-                            background='black'
-                            py={1}
-                            borderBottomRadius="3xl"
-                        >
+                    //     <Box
+                    //         position="absolute"
+                    //         bottom="0"
+                    //         width="100%"
+                    //         height="100%" // full height to fade smoothly into the image
+                    //         bg="linear-gradient(to top, rgba(10, 10, 10, 0.6), transparent 60%)"
+                    //         borderRadius="3xl"
+                    //     />
+
+                    //     <Text
+                    //         position="absolute"
+                    //         bottom="12px"
+                    //         width="100%"
+                    //         color="white"
+                    //         textAlign="center"
+                    //         fontSize="sm"
+                    //         px={2}
+                    //     >
+                    //         {data.title}
+                    //     </Text>
+                    // </Box>
+                    // <Box role="group"
+
+                    //     position="relative" w="180px" h="120px" borderRadius="3xl" overflow="hidden" mt="30px" border="2px solid transparent"
+                    //     transition="all 0.3s ease"
+                    //     _hover={{
+                    //         border: '2px solid brown',
+                    //     }}>
+                    //     <Image
+                    //         src={img}
+                    //         alt={data.title}
+                    //         w="100%"
+                    //         h="100%"
+                    //         objectFit="cover"
+                    //         borderRadius="3xl"
+                    //         transition="transform 0.3s ease"
+                    //         _groupHover={{
+                    //             transform: 'scale(1.05)',
+                    //         }}
+                    //     />
+
+                    //     <Box
+                    //         position="absolute"
+                    //         bottom="0"
+                    //         width="100%"
+                    //         height="100%"
+                    //         bg="linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent 60%)"
+                    //         borderRadius="3xl"
+                    //     />
+
+                    //     <Text
+                    //         position="absolute"
+                    //         bottom="12px"
+                    //         width="100%"
+                    //         color="white"
+                    //         textAlign="center"
+                    //         px={2}
+                    //         textShadow="0px 0px 6px rgba(0, 0, 0, 0.7)"
+                    //     >
+                    //         {data.title}
+                    //     </Text>
+                    // </Box>
+                    <Box className="image-card">
+                        <img src={img} alt={data.title} />
+
+                        <Box className="gradient-overlay" />
+
+                        <Text className="image-title">
                             {data.title}
                         </Text>
                     </Box>
+
                 ))}
             </Box>
             <HStack mt='30px' >
@@ -93,14 +155,14 @@ const ServiceDetails = () => {
 
             <Accordion.Root collapsible defaultValue={["b"]} background='white ' border="1px solid  #d3d3d3 " borderRadius='xl' p='10px' mt='50px'>
 
-                <Accordion.Item borderBottom="none" >
+                <Accordion.Item borderBottom="none"  >
                     <Accordion.ItemTrigger>
-                        <Span flex="1" fontWeight='bold' fontSize='lg'>Message Therapy</Span>
-                        <Accordion.ItemIndicator color='brown' />
+                        <Span flex="1" fontWeight='bold' fontSize='lg' ml='20px'>Message Therapy</Span>
+                        {/* <Accordion.ItemIndicator color='brown' /> */}
                     </Accordion.ItemTrigger>
                     <Accordion.ItemContent>
                         <Accordion.ItemBody p='15px'>
-                            <VStack>
+                            <VStack ml='20px' mr='20px'>
                                 <HStack w="100%" justifyContent="space-between" alignItems="center">
                                     <VStack align="flex-start" maxW="70%">
                                         <Text fontWeight='bold' fontSize='lg'>Swedish Message</Text>
@@ -119,7 +181,17 @@ const ServiceDetails = () => {
                                         <PiDotOutlineFill color="brown" />
                                         <Text as="span">Walkin</Text>
                                     </HStack>
-                                    <Button variant='outline' borderRadius='3xl' borderColor="#8B4513" color='#8B4513' w='100px' h='35px' >Remove</Button>                                    </HStack>
+                                    <Button borderRadius='xl'
+                                        border="2px solid transparent"
+
+                                        bg="linear-gradient(white, white) padding-box, linear-gradient(to right, #5e4325, #c1a15f) border-box" color='#8B4513' w='100px' h='35px' >Remove</Button>
+
+
+
+                                </HStack>
+
+
+
 
                                 <Box borderBottom="1px solid  #d3d3d3" width="100%" my={4} />
                                 <HStack w="100%" justifyContent="space-between" alignItems="center">
@@ -140,7 +212,7 @@ const ServiceDetails = () => {
                                         <PiDotOutlineFill color="brown" />
                                         <Text as="span">Walkin</Text>
                                     </HStack>
-                                    <Button variant='outline' borderRadius='3xl' borderColor="#8B4513" color='white' w='100px' h='35px' background='linear-gradient(45deg, #5B4C2D, #C1A15F)}'    >Add</Button>                                    </HStack>
+                                    <Button variant='outline' borderRadius='xl' color='white' w='100px' h='35px' background='linear-gradient(45deg, #5B4C2D, #C1A15F)}'    >Add</Button>                                    </HStack>
 
                                 <Box borderBottom="1px solid  #d3d3d3" width="100%" my={4} />
                                 <HStack w="100%" justifyContent="space-between" alignItems="center">
@@ -161,7 +233,7 @@ const ServiceDetails = () => {
                                         <PiDotOutlineFill color="brown" />
                                         <Text as="span">Walkin</Text>
                                     </HStack>
-                                    <Button variant='outline' borderRadius='3xl' borderColor="#8B4513" color='white' w='100px' h='35px' background='linear-gradient(45deg, #5B4C2D, #C1A15F)}'    >Add</Button>                                    </HStack>
+                                    <Button variant='outline' borderRadius='xl' color='white' w='100px' h='35px' background='linear-gradient(45deg, #5B4C2D, #C1A15F)}'    >Add</Button>                                    </HStack>
 
 
                             </VStack>
@@ -173,9 +245,9 @@ const ServiceDetails = () => {
             <Accordion.Root collapsible defaultValue={["b"]} background='white ' border="1px solid  #d3d3d3 " borderRadius='xl' p='10px' mt='20px'   >
 
                 <Accordion.Item borderBottom="none" >
-                    <Accordion.ItemTrigger>
+                    <Accordion.ItemTrigger ml='20px'>
                         <Span flex="1" fontWeight='bold' fontSize='lg'>Nail Bar</Span>
-                        <Accordion.ItemIndicator color='brown' />
+                        {/* <Accordion.ItemIndicator color='brown' /> */}
                     </Accordion.ItemTrigger>
                     <Accordion.ItemContent>
                         <Accordion.ItemBody p='15px'>
@@ -189,8 +261,8 @@ const ServiceDetails = () => {
 
                 <Accordion.Item borderBottom="none" >
                     <Accordion.ItemTrigger>
-                        <Span flex="1" fontWeight='bold' fontSize='lg'>Manicure&Pedicure</Span>
-                        <Accordion.ItemIndicator color='brown' />
+                        <Span flex="1" fontWeight='bold' fontSize='lg' ml='20px'>Manicure&Pedicure</Span>
+                        {/* <Accordion.ItemIndicator color='brown' /> */}
                     </Accordion.ItemTrigger>
                     <Accordion.ItemContent>
                         <Accordion.ItemBody p='15px'>

@@ -6,6 +6,7 @@ import {
     Text,
     Spacer,
     Input,
+    Image,
     Stack
 } from '@chakra-ui/react';
 
@@ -14,8 +15,7 @@ import {
     CardBody,
 } from '@chakra-ui/react';
 
-import { Image } from '@chakra-ui/react';
-
+import reelImg from '../Images/reel.png'
 import { FiHome, FiSearch, FiVideo, FiShoppingCart, FiUser } from 'react-icons/fi';
 import { InputGroup } from "@chakra-ui/react"
 import { LuLocate, LuSearch } from "react-icons/lu"
@@ -45,7 +45,7 @@ const Navbar = () => {
                     </Flex>
 
                     <Flex align="center" gap={2}>
-                        <FiVideo />
+                        <Image src={reelImg} w='20px' />
                         <Text fontSize="sm">Reels</Text>
                     </Flex>
 

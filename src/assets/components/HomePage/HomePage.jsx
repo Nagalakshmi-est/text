@@ -24,18 +24,25 @@ import { Avatar, Button, Card } from "@chakra-ui/react"
 import combo from '../../Images/comb.jpeg'
 import towl from '../../Images/towl.png'
 import beauty from '../../Images/beauty.png'
-import group from '../../Images/Group.png'
+// import group from '../../Images/Group.png'
 import BeautyCards from './BeautyCards';
 import { FaArrowRightLong } from "react-icons/fa6";
 import Navbar from '../Navbar';
 import { useNavigate } from 'react-router-dom';
+import ContainerWrapper from '../ContainerWraper/ContainerWraper';
+import ImageCarousel from '../ContainerWraper/ImageCarousel';
+import slide1 from "../../Images/Group.png";
+import slide2 from "../../Images/Group.png";
+import slide3 from "../../Images/Group.png";
+const images = [slide1, slide2, slide3];
 
 const HomePage = () => {
+
     const navigate = useNavigate()
-    return (
-        <Box  >
+    return (<>
+        <ContainerWrapper>
             <Navbar />
-            <Flex justify="center" mt={{ base: '60px', md: '150px', lg: '150px' }}>
+            <Flex justify="center" mt={{ base: '60px', md: '100px', lg: '100px' }}>
                 <HStack
                     flexDir={{ base: "column", md: "row", lg: "row" }}
                     maxW="600px"
@@ -44,14 +51,14 @@ const HomePage = () => {
                         <Input placeholder="1208,Spline Arcade,flat no1..." borderRadius='lg' w='250px' background='gray.100' _placeholder={{ color: "#8B4513" }} />
                     </InputGroup>
 
-                    <InputGroup startElement={<LuSearch />} mr={{ base: '20px', md: '70px', lg: '70px' }}>
+                    <InputGroup startElement={<LuSearch />} w={{ base: '200px', md: '300px', lg: '900px' }}>
                         <Input placeholder="Search Services..." borderRadius='lg' background='white' />
                     </InputGroup>
                 </HStack>
             </Flex>
 
 
-            <Box maxW="1250px" w="100%" mx="auto" mt="60px" >
+            <Box w="100%" mx="auto" mt="60px" >
                 <HStack gap='80px' flexDir={{ base: 'column', md: 'row' }}>
                     <Card.Root width={{ base: '300px', md: '360px', lg: "360px" }} height={{ base: '170px', md: '210px', lg: "170px" }} borderRadius="4xl" onClick={() => navigate('/services')}>
                         <Card.Body gap="5px">
@@ -108,10 +115,11 @@ const HomePage = () => {
                 </HStack>
             </Box>
 
-            <Box maxW="1250px" w="100%" mx="auto" mt={10}>
-                <Image src={group} alt="Group" w="100%" objectFit="cover" borderRadius="xl" />
+            <Box w="100%" mx="auto" mt={10}>
+                {/* <Image src={group} alt="Group" w="100%" objectFit="cover" borderRadius="xl" /> */}
+                <ImageCarousel images={images} />
             </Box>
-            <HStack maxW="1250px" w="100%" mx="auto" mt='30px' mb='20px'>
+            <HStack w="100%" mx="auto" mt='30px' mb='20px'>
                 <Text fontSize='30px' fontWeight='bold'>Featured</Text>
                 <Spacer />
                 <Text>View all</Text>
@@ -119,9 +127,10 @@ const HomePage = () => {
             </HStack>
 
 
-            <BeautyCards />
 
-        </Box>
+        </ContainerWrapper>
+
+        <BeautyCards /></>
     );
 };
 

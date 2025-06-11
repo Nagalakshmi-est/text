@@ -28,8 +28,8 @@ const DocStaff = () => {
                     Staff.map((data) => (
                         <><Box background='white' p='10px' >
 
-                            <VStack> <Image src={doctorImg} h='80px' />
-                                <Text>{data.name}</Text>
+                            <VStack gap={0}> <Image src={doctorImg} h='80px' />
+                                <Text fontSize='lg' fontWeight='semibold'>{data.name}</Text>
                                 <Text>{data.role}</Text>
                                 <Text>{data.exp}</Text></VStack>
                         </Box>

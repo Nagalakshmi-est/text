@@ -16,13 +16,14 @@ import { Badge, HStack, Icon, } from "@chakra-ui/react"
 import { FcLike } from "react-icons/fc";
 import { TiHeartFullOutline } from "react-icons/ti";
 import { GoHeartFill } from "react-icons/go";
-import offerImg from '../../Images/offer.png'
 import { HiStar } from "react-icons/hi"
 import { Grid } from "@chakra-ui/react"
 import spaimg from '../../Images/Spa.png'
 import { PiHeartThin } from "react-icons/pi";
 import { useNavigate } from "react-router-dom";
 import { IoLocationOutline } from "react-icons/io5";
+import ContainerWrapper from "../ContainerWraper/ContainerWraper";
+import offerImg from '../../Images/offer.png'
 
 const data = [
     {
@@ -147,37 +148,82 @@ const BeautyCards = () => {
     return (
 
         <>
+            <ContainerWrapper >
 
-            <Box maxW="1250px" w="100%" mx="auto" mt={10}>
                 <Grid templateColumns={{
                     base: "repeat(1, 1fr)",
                     sm: "repeat(2, 1fr)",
                     md: "repeat(2, 1fr)",
                     lg: "repeat(3, 1fr)",
                     xl: "repeat(4, 1fr)"
-                }} gap="6">
+                }} gap="6" >
                     {data.map((dev) => (
                         <Box maxW='350px' borderWidth="1px" borderRadius='2xl' onClick={() => navigate('/spadetails')} >
 
 
-                            <Box position="relative" borderRadius="2xl" overflow="hidden">
+                            {/* <Box position="relative" borderRadius="2xl" overflow="hidden" >
                                 <Image src={spaimg} borderRadius="2xl" height="140px" width="100%" objectFit="cover" />
                                 <Box
                                     position="absolute"
-                                    bottom='1'
+                                    bottom="1"
                                     left="2"
-                                    fontSize='small'
+                                    fontSize="small"
                                     color="#25B701"
-                                    px="2"
+                                    px="3"
                                     py="1"
-                                    borderRadius="md"
-
+                                    borderRadius="lg"
+                                    bg="rgba(255, 255, 255, 0.1)"
+                                    backdropFilter="blur(1px)"
+                                    boxShadow="0 4px 16px rgba(0, 0, 0, 0.2)"
                                 >
-                                    <HStack>  <Image src={offerImg} />
-                                        Flat 10% Off above value of 200 </HStack>
-                                </Box>
-                            </Box>
+                                    <HStack>
 
+                                        <Image src={offerImg} />
+                                        Flat 10% Off above value of 200
+
+                                    </HStack>
+                                </Box>
+                            </Box> */}
+                            <Box position="relative" borderRadius="2xl" overflow="hidden" w="100%" h="140px">
+                                {/* Main Image */}
+                                <Image
+                                    src={spaimg}
+                                    w="100%"
+                                    h="100%"
+                                    objectFit="cover"
+                                    alt="Spa Offer"
+                                />
+
+                                {/* Black Overlay at Bottom (Fixed Height) */}
+                                <Box
+                                    position="absolute"
+                                    bottom="0"
+                                    left="0"
+                                    right="0"
+                                    height="30px"  // Adjust height for more/less black area
+                                    bg="blackAlpha.700"  // Semi-transparent black
+                                />
+
+                                {/* Glass Effect Text (Positioned Over Black Background) */}
+                                <Box
+                                    position="absolute"
+                                    bottom="15px"  // Adjust to move up/down
+                                    left="15px"   // Adjust to move left/right
+                                    color="#25B701"
+                                    fontSize="sm"
+                                    px="3px"
+                                    py="2px"
+                                    borderRadius="md"
+                                    bg="rgba(255, 255, 255, 0.15)"  // Glass transparency
+                                    backdropFilter="blur(1px)"       // Frosted effect
+                                >
+                                    <HStack>
+
+                                        <Image src={offerImg} />
+                                        Flat 10% Off above value of 200
+
+                                    </HStack>                                </Box>
+                            </Box>
                             <Box p="4" >
                                 <VStack align="start" spacing={2}>
 
@@ -199,7 +245,7 @@ const BeautyCards = () => {
                                                 {dev.rating}
                                             </Text>
                                         </HStack>
-                                        <HStack gap="1" fontWeight="medium">
+                                        <HStack gap="1" fontWeight="medium" ml='8px'>
                                             <Icon >
                                                 <IoLocationOutline />
                                             </Icon>
@@ -220,8 +266,7 @@ const BeautyCards = () => {
                     ))}
                 </Grid>
 
-            </Box>
-
+            </ContainerWrapper>
         </>
     );
 };

@@ -6,10 +6,18 @@ import { GrLocation } from "react-icons/gr";
 import { TbRefresh } from "react-icons/tb";
 import img from '../Images/Day Spa.png'
 import { FaArrowRightLong } from "react-icons/fa6";
-import makeupimg from '../Images/Makeupbanner.png'
-import halfmakeup from '../Images/HalfMakeup.png'
+// import makeupimg from '../Images/Makeupbanner.png'
+// import halfmakeup from '../Images/HalfMakeup.png'
 import { MdArrowDropDown } from "react-icons/md";
 import BeautyCards from './HomePage/BeautyCards';
+import ImageCarousel from './ContainerWraper/ImageCarousel';
+import ContainerWrapper from './ContainerWraper/ContainerWraper';
+
+import slide1 from '../Images/Group.png'
+import slide2 from '../Images/Group.png'
+import slide3 from '../Images/Group.png'
+
+const images = [slide1, slide2, slide3];
 
 
 
@@ -35,9 +43,10 @@ const Imagecircle = [
 
 ]
 const Services = () => {
-    return (
+    return (<>
+        <Navbar />
+        <ContainerWrapper>
 
-        <> <Navbar />
 
 
             <Flex justify="center" mt={{ base: '60px', md: '80px', lg: '80px' }} >
@@ -59,7 +68,7 @@ const Services = () => {
 
 
 
-            <Box w="100%" maxW="1250px" mx="auto" >
+            <Box  >
                 <HStack mt='20px' flexDir={{ base: 'column', md: 'row', lg: 'row' }}><Text fontWeight='bold' fontSize='30px'>Services</Text>
                     <Spacer />
                     <HStack> <Text fontSize='20px'>View all</Text>
@@ -77,55 +86,54 @@ const Services = () => {
                     flexDir={{ base: 'column', md: 'row', lg: 'row' }}
                 >
                     {Images.map((data) => (
-                        <Box
-                            key={data.id}
-                            mt='30px'
-                            position="relative"
-                            borderRadius="md"
-                            overflow="hidden"
-
-                            flexShrink={1}     // allow shrinking if container is smaller
-                        >
+                        <Box position="relative" w="180px" h="120px" borderRadius="3xl" overflow="hidden" mt="30px">
                             <Image
                                 src={img}
                                 alt={data.title}
-                                w="180px"
-                                h="120px"
+                                w="100%"
+                                h="100%"
                                 objectFit="cover"
                                 borderRadius="3xl"
                             />
-                            <Text
+
+                            <Box
                                 position="absolute"
                                 bottom="0"
                                 width="100%"
+                                height="100%"
+                                bg="linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent 60%)"
+                                borderRadius="3xl"
+                            />
+
+                            <Text
+                                position="absolute"
+                                bottom="12px"
+                                width="100%"
                                 color="white"
                                 textAlign="center"
-                                background='black'
-                                py={1}
-                                borderBottomRadius="3xl"
+                                px={2}
+                                textShadow="0px 0px 6px rgba(0, 0, 0, 0.7)"
                             >
                                 {data.title}
                             </Text>
                         </Box>
                     ))}
                 </Box>
-
-
-                <Box mt="40px" maxW="1250px" w="100%" mx="auto"  >
-                    <Flex gap={4} flexDir={{ base: 'column', md: 'row', lg: 'row' }}>
-                        <Image src={makeupimg} />
-                        <Image src={halfmakeup} w={{ base: '300px', md: '400px', lg: '490px' }} borderTopLeftRadius="4xl"
-                            borderBottomLeftRadius="4xl" />  </Flex>
-                </Box>
-
-                <HStack mt='20px' flexDir={{ base: 'column', md: 'row', lg: 'row' }}><Text fontWeight='bold' fontSize='30px'>Premium Spa</Text>
-                    <Spacer />
-                    <HStack> <Text fontSize='20px'>View all</Text>
-                        <FaArrowRightLong />
-                    </HStack></HStack>
             </Box>
+
+
+            <Box w="100%" mx="auto" mt={10}>
+                {/* <Image src={group} alt="Group" w="100%" objectFit="cover" borderRadius="xl" /> */}
+                <ImageCarousel images={images} />
+            </Box>
+            <HStack mt='20px' flexDir={{ base: 'column', md: 'row', lg: 'row' }}><Text fontWeight='bold' fontSize='30px'>Premium Spa</Text>
+                <Spacer />
+                <HStack> <Text fontSize='20px'>View all</Text>
+                    <FaArrowRightLong />
+                </HStack></HStack>
+
             <Box
-                maxW="1250px" w="100%" mx="auto"
+
                 display="flex"
                 gap={10}
                 flexWrap="nowrap"
@@ -156,8 +164,8 @@ const Services = () => {
                     </Box>
                 ))}
             </Box>
-            <Box maxW="1200px" w="100%" mx="auto" >
-                <HStack mt='30px' flexDir={{ base: 'column', md: 'row', lg: 'row' }}>
+            <Box  >
+                <HStack mt='30px' mb='30px' flexDir={{ base: 'column', md: 'row', lg: 'row' }}>
                     <Text> Filters</Text>
 
                     <HStack flexDir={{ base: 'column', md: 'row', lg: 'row' }}>
@@ -210,10 +218,10 @@ const Services = () => {
 
                 </HStack>
             </Box>
+        </ContainerWrapper>
 
-            <BeautyCards />
-
-        </>
+        <BeautyCards />
+    </>
 
     )
 }

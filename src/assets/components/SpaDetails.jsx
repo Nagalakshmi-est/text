@@ -22,126 +22,130 @@ import DocStaff from './ServiceTabs/DocStaff'
 import GalleryTab from './ServiceTabs/GalleryTab'
 import Reviews from './ServiceTabs/Reviews'
 import AboutUs from './ServiceTabs/AboutUs'
+import ImageCarousel from './ContainerWraper/ImageCarousel'
+import ContainerWrapper from './ContainerWraper/ContainerWraper'
+
+import slide1 from '../Images/Cosmotic.png'
+import slide2 from '../Images/Cosmotic.png'
+import slide3 from '../Images/Cosmotic.png'
+import OfferCarousel from './ContainerWraper/OfferCarousel'
+
+
+const images = [slide1, slide2, slide3];
 
 const SpaDetails = () => {
     return (
         <>
             <Navbar />
 
+            <ContainerWrapper>
+                <Box mt='50px' >
+                    <Box >
 
-            <Box mt='50px'  >
-                <Box >
-                    <HStack gap={6}>
-                        <Image src={CosmoticImg} />
-                        <Image src={CosmoticHalf} />
-                    </HStack>
-                </Box>
-                <Box mt='20px' bg='White' borderRadius='3xl' p='20px' boxShadow="md" >
-                    <VStack align='flex-start'>
-                        <HStack>
-                            <Image src={logo} borderRadius='full' height='70px' width='70px' />
+                        <ImageCarousel images={images} />
 
-                            <VStack ml='-30px'>
+                    </Box>
+                    <Box mt='20px' bg='White' borderRadius='3xl' p='20px' boxShadow="md" >
+                        <VStack align='flex-start'>
+                            <HStack>
+                                <Image src={logo} borderRadius='full' height='70px' width='70px' />
 
-                                <Text fontSize='3xl' fontWeight='bold'>  Oasis Spa Haven</Text>
-                                <HStack> <Image src={MapPin} height='26px' ml='40px' />
-                                    <Text ml='-5px'>Madhapur</Text>
-                                    <Image src={LocationPng} height='23px' ml='20px' />
+                                <VStack ml='-30px'>
 
-                                    <Text ml='-5px'>3.5Km</Text>
-                                    <Image src={star} height='20px' ml='20px' />
+                                    <Text fontSize='3xl' fontWeight='bold ' ml='10px'>  Oasis Spa Haven</Text>
+                                    <HStack> <Image src={MapPin} height='26px' ml='40px' />
+                                        <Text ml='-5px'>Madhapur</Text>
+                                        <Image src={LocationPng} height='23px' ml='20px' />
 
-                                    <Text ml='-5px'>4.5</Text></HStack>
+                                        <Text ml='-5px'>3.5Km</Text>
+                                        <Image src={star} height='20px' ml='20px' />
 
-                            </VStack>
+                                        <Text ml='-5px'>4.5</Text></HStack>
 
-
-                        </HStack>
-                        <Box borderBottom="2px dashed  #d3d3d3" width="100%" my={4} />
-
-                        <HStack gap={4}  >
-                            <Box border="2px solid #d3d3d3"
-                                borderRadius="2xl"
-                                height="90px"
-                                width="480px"
-                                display="flex"
-                                alignItems="center"
-                                paddingLeft="16px">
-                                <Image src={UseCode} h='50px' />
-
-                                <VStack align='flex-start' p='20px'><Text fontSize='xl' fontWeight='medium'> Use Code
-
-                                    <span style={{ fontWeight: 'bold' }}> Dsaloon</span> </Text>
-                                    <Text color='gray'>Get &#8377;500 off on orders above 100/- </Text>
                                 </VStack>
-                            </Box>
-                            <Box border="2px solid #d3d3d3"
-                                borderRadius="2xl"
-                                height="90px"
-                                width="480px"
-                                display="flex"
-                                alignItems="center"
-                                paddingLeft="16px">
-                                <Image src={UseCode} h='50px' />
 
-                                <VStack align='flex-start' p='20px'>
-                                    <Text fontSize='xl' fontWeight='medium'> Use Code
+
+                            </HStack>
+                            <Box borderBottom="2px dashed  #d3d3d3" width="100%" my={4} />
+
+                            {/* <HStack gap={4}  >
+                                <Box border="2px solid #d3d3d3"
+                                    borderRadius="2xl"
+                                    height="90px"
+                                    width="480px"
+                                    display="flex"
+                                    alignItems="center"
+                                    paddingLeft="16px">
+                                    <Image src={UseCode} h='50px' />
+
+                                    <VStack align='flex-start' p='20px'><Text fontSize='xl' fontWeight='medium'> Use Code
 
                                         <span style={{ fontWeight: 'bold' }}> Dsaloon</span> </Text>
-                                    <Text color='gray'>Get &#8377;500 off on orders above 100/- </Text>
-                                </VStack>
-                            </Box>
-                            <Box border="2px solid  #d3d3d3 " borderLeftRadius='2xl' borderRight='none' h='90px' w='240px' paddingLeft="16px" display='flex' alignItems='center'>
-                                <Image src={UseCode} h='50px' />
-                                <VStack align='flex-start' p='20px'>
-                                    <Text fontSize='xl' fontWeight='medium'> Use Code
+                                        <Text color='gray'>Get &#8377;500 off on orders above 100/- </Text>
+                                    </VStack>
+                                </Box>
+                                <Box border="2px solid #d3d3d3"
+                                    borderRadius="2xl"
+                                    height="90px"
+                                    width="480px"
+                                    display="flex"
+                                    alignItems="center"
+                                    paddingLeft="16px">
+                                    <Image src={UseCode} h='50px' />
 
-                                        <span style={{ fontWeight: 'bold' }}> Ds</span> </Text>
-                                    <Text color='gray'>Get &#8377;500 off on  </Text>
-                                </VStack>
-                            </Box>
+                                    <VStack align='flex-start' p='20px'>
+                                        <Text fontSize='xl' fontWeight='medium'> Use Code
 
-                        </HStack>
-                    </VStack>
-                </Box>
-                <Tabs.Root defaultValue="services" mt='40px' >
-
-                    <Tabs.List>
-
-                        <Tabs.Trigger value="services" >
-                            Services
-                        </Tabs.Trigger>
-                        <Tabs.Trigger value="doc">
-                            Doc&Staff
-                        </Tabs.Trigger>
-                        <Tabs.Trigger value="gallery">
-                            Gallery
-                        </Tabs.Trigger>
-                        <Tabs.Trigger value="reviews">
-                            Reviews
-                        </Tabs.Trigger>
-                        <Tabs.Trigger value="about">
-                            About Us
-                        </Tabs.Trigger>
-
-                    </Tabs.List>
-                    <Tabs.Content value="services">
-
-                        <ServiceDetails />
-
-                    </Tabs.Content>
-                    <Tabs.Content value="doc"><DocStaff /></Tabs.Content>
-                    <Tabs.Content value="gallery">
-                        <GalleryTab />
-                    </Tabs.Content>
-                    <Tabs.Content value="reviews">
-                        <Reviews />
-                    </Tabs.Content>  <Tabs.Content value="about">
-                        <AboutUs />                    </Tabs.Content>
-                </Tabs.Root>
+                                            <span style={{ fontWeight: 'bold' }}> Dsaloon</span> </Text>
+                                        <Text color='gray'>Get &#8377;500 off on orders above 100/- </Text>
+                                    </VStack>
+                                </Box>
 
 
-            </Box>
+                            </HStack> */}
+
+
+                            <OfferCarousel />
+                        </VStack>
+                    </Box>
+                    <Tabs.Root defaultValue="services" mt='40px' >
+
+                        <Tabs.List>
+
+                            <Tabs.Trigger value="services" >
+                                Services
+                            </Tabs.Trigger>
+                            <Tabs.Trigger value="doc">
+                                Doc&Staff
+                            </Tabs.Trigger>
+                            <Tabs.Trigger value="gallery">
+                                Gallery
+                            </Tabs.Trigger>
+                            <Tabs.Trigger value="reviews">
+                                Reviews
+                            </Tabs.Trigger>
+                            <Tabs.Trigger value="about">
+                                About Us
+                            </Tabs.Trigger>
+
+                        </Tabs.List>
+                        <Tabs.Content value="services">
+
+                            <ServiceDetails />
+
+                        </Tabs.Content>
+                        <Tabs.Content value="doc"><DocStaff /></Tabs.Content>
+                        <Tabs.Content value="gallery">
+                            <GalleryTab />
+                        </Tabs.Content>
+                        <Tabs.Content value="reviews">
+                            <Reviews />
+                        </Tabs.Content>  <Tabs.Content value="about">
+                            <AboutUs />                    </Tabs.Content>
+                    </Tabs.Root>
+
+
+                </Box></ContainerWrapper>
         </>
     )
 }
