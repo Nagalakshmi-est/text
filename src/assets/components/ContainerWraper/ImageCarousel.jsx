@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
-const ImageCarousel = ({ images = [], delay = 3000, loop = true }) => {
+const ImageCarousel = ({ images = [], delay = 4000, loop = true }) => {
     return (
         <Box w="100%" maxW="1250px" mx="auto" borderRadius="4xl" overflow="hidden">
             <Swiper

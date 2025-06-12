@@ -45,7 +45,7 @@ const OfferCarousel = () => {
                 slidesPerView={1}
                 className="custom-swiper"
                 autoplay={{
-                    delay: 3000,
+                    delay: 4000,
                     reverseDirection: false,
                     disableOnInteraction: false,
                 }}

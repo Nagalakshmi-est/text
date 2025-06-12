@@ -4,7 +4,7 @@ import doctorImg from '../../Images/DoctorImg.png'
 
 const Staff = [
     { name: 'Dr.Manisha K', role: 'Dermatology', exp: '15yrs' },
-    { name: 'Dr.Manisha K', role: 'Dermatologic surgery', exp: '15yrs' },
+    { name: 'Dr.Manisha K', role: 'Dermatologic', exp: '15yrs' },
     { name: 'Dr.Manisha K', role: 'Dermatology', exp: '15yrs' },
     { name: 'Dr.Manisha K', role: 'Dermatology', exp: '15yrs' },
     { name: 'Dr.Manisha K', role: 'Dermatology', exp: '15yrs' },
@@ -17,7 +17,7 @@ const Staff = [
 
 const DocStaff = () => {
     return (
-        <div>
+        <Box>
             <Grid templateColumns={{
                 base: "repeat(1, 1fr)",
                 sm: "repeat(2, 1fr)",
@@ -26,7 +26,7 @@ const DocStaff = () => {
             }} gap="6">
                 {
                     Staff.map((data) => (
-                        <><Box background='white' p='10px' boxShadow='sm' >
+                        <><Box background='white' p='10px' boxShadow='sm' borderRadius='lg'>
 
                             <VStack gap={0}> <Image src={doctorImg} h='80px' />
                                 <Text fontSize='lg' fontWeight='semibold'>{data.name}</Text>
@@ -36,7 +36,7 @@ const DocStaff = () => {
                         </>
                     ))
                 }</Grid>
-        </div>
+        </Box>
 
 
     )

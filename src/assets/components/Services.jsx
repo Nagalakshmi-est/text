@@ -207,9 +207,9 @@ const Services = () => {
                                 <Menu.Positioner>
                                     <Menu.Content>
                                         <Menu.Item value="new-txt">All</Menu.Item>
-                                        <Menu.Item value="new-txt">Male</Menu.Item>
-                                        <Menu.Item value="new-file"> Female</Menu.Item>
-                                        <Menu.Item value="new-file"> UniSex</Menu.Item>
+                                        <Menu.Item value="new-file">Male</Menu.Item>
+                                        <Menu.Item value="new-win"> Female</Menu.Item>
+                                        <Menu.Item value="new-openfile"> UniSex</Menu.Item>
 
                                     </Menu.Content>
                                 </Menu.Positioner>
