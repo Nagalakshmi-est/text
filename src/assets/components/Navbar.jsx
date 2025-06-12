@@ -27,7 +27,16 @@ import { GoArrowRight } from "react-icons/go";
 
 const Navbar = () => {
     return (
-        <Box borderRadius="md" >
+        <Box
+            as="nav"
+            w='100vw'
+            py={4}
+            bg="#E7DAC2"
+            position="sticky"
+            top="0"
+            zIndex="1000"
+            ml='-45px'
+        >
             <Flex align="center" flexDir={{ base: 'column', md: 'row' }} >
                 <Box bg="gray.400" w="100px" h="30px" borderRadius="lg" ml='80px' />
 

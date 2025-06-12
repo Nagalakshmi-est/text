@@ -230,7 +230,7 @@ const BeautyCards = () => {
                                         <Text fontWeight="medium" color="fg"> {dev.title}    </Text>
 
                                         <Spacer />
-                                        <GoHeartFill color="#B7995B" style={{ marginLeft: '90px' }} />
+                                        <GoHeartFill color="#B7995B" style={{ marginLeft: '90px' }} size='20px' />
                                     </HStack>
 
 

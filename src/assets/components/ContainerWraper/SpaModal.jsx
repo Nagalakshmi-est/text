@@ -56,7 +56,7 @@ const SpaModal = () => {
                         left="0"
                         width="100vw"
                         height="100vh"
-                        bg="rgba(255, 255, 255, 0.39)"  // Light semi-transparen
+                        bg="rgba(248, 242, 242, 0.39)"  // Light semi-transparen
                         backdropFilter="blur(1px)"     // Light blur
 
                         zIndex={999}

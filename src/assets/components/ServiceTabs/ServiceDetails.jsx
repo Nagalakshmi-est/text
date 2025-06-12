@@ -28,101 +28,22 @@ const ServiceDetails = () => {
         <div>
             <Box
                 display="flex"
-                gap={10}
+                gap={4}
                 flexWrap="nowrap"
                 justifyContent="flex-start"
                 alignItems="center"
                 flexGrow={1}
                 flexDir={{ base: 'column', md: 'row', lg: 'row' }}
-                p='20px'
+                mt='10px'
             >
                 {Images.map((data) => (
-                    // <Box
-                    //     position="relative"
-                    //     w="180px"
-                    //     h="120px"
-                    //     borderRadius="3xl"
-                    //     overflow="hidden"
-                    //     mt="30px"
-                    //     flexShrink={1}
-                    // >
-                    //     <Image
-                    //         src={img}
-                    //         alt={data.title}
-                    //         w="100%"
-                    //         h="100%"
-                    //         objectFit="cover"
-                    //         borderRadius="3xl"
-                    //     />
 
-                    //     <Box
-                    //         position="absolute"
-                    //         bottom="0"
-                    //         width="100%"
-                    //         height="100%" // full height to fade smoothly into the image
-                    //         bg="linear-gradient(to top, rgba(10, 10, 10, 0.6), transparent 60%)"
-                    //         borderRadius="3xl"
-                    //     />
-
-                    //     <Text
-                    //         position="absolute"
-                    //         bottom="12px"
-                    //         width="100%"
-                    //         color="white"
-                    //         textAlign="center"
-                    //         fontSize="sm"
-                    //         px={2}
-                    //     >
-                    //         {data.title}
-                    //     </Text>
-                    // </Box>
-                    // <Box role="group"
-
-                    //     position="relative" w="180px" h="120px" borderRadius="3xl" overflow="hidden" mt="30px" border="2px solid transparent"
-                    //     transition="all 0.3s ease"
-                    //     _hover={{
-                    //         border: '2px solid brown',
-                    //     }}>
-                    //     <Image
-                    //         src={img}
-                    //         alt={data.title}
-                    //         w="100%"
-                    //         h="100%"
-                    //         objectFit="cover"
-                    //         borderRadius="3xl"
-                    //         transition="transform 0.3s ease"
-                    //         _groupHover={{
-                    //             transform: 'scale(1.05)',
-                    //         }}
-                    //     />
-
-                    //     <Box
-                    //         position="absolute"
-                    //         bottom="0"
-                    //         width="100%"
-                    //         height="100%"
-                    //         bg="linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent 60%)"
-                    //         borderRadius="3xl"
-                    //     />
-
-                    //     <Text
-                    //         position="absolute"
-                    //         bottom="12px"
-                    //         width="100%"
-                    //         color="white"
-                    //         textAlign="center"
-                    //         px={2}
-                    //         textShadow="0px 0px 6px rgba(0, 0, 0, 0.7)"
-                    //     >
-                    //         {data.title}
-                    //     </Text>
-                    // </Box>
-                    <Box className="image-card">
+                    <Box className="image-card" h='120px' w='130px' >
                         <img src={img} alt={data.title} />
 
                         <Box className="gradient-overlay" />
 
-                        <Text className="image-title">
+                        <Text className="image-title" fontSize='sm'>
                             {data.title}
                         </Text>
                     </Box>

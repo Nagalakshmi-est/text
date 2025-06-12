@@ -40,7 +40,7 @@ const Reviews = () => {
             }} gap="6">
                 {
                     data.map((Data) => (
-                        <Box h='160px' w='620px' bg='white' borderRadius='2xl' py='10px' px='25px ' boxShadow='xl' >
+                        <Box h='160px' w='570px' bg='white' borderRadius='2xl' py='10px' px='25px ' boxShadow='xl' mt='5px'  >
                             <HStack><Image src={Img} w='40px' />
 
                                 <VStack align='flex-start' w='100%'>

@@ -6,7 +6,6 @@ import { GrLocation } from "react-icons/gr";
 import { TbRefresh } from "react-icons/tb";
 import img from '../Images/Day Spa.png'
 import { FaArrowRightLong } from "react-icons/fa6";
-
 // import makeupimg from '../Images/Makeupbanner.png'
 // import halfmakeup from '../Images/HalfMakeup.png'
 import { MdArrowDropDown } from "react-icons/md";
@@ -30,6 +29,8 @@ const Images = [
     { id: 4, title: "Medical Spa" },
     { id: 5, title: "Wellness Spa" },
     { id: 6, title: "Wellness Spa" },
+    { id: 7, title: "Wellness Spa" },
+
 
 ]
 const Imagecircle = [
@@ -42,6 +43,9 @@ const Imagecircle = [
     { id: 7, title: "Wellness Spa" },
     { id: 8, title: "Wellness Spa" },
     { id: 9, title: "Wellness Spa" },
+
+
+
 
 ]
 const Services = () => {
@@ -80,7 +84,7 @@ const Services = () => {
 
                 <Box
                     display="flex"
-                    gap={8}
+                    gap={4}
                     flexWrap="nowrap"
                     justifyContent="flex-start"
                     alignItems="center"
@@ -89,7 +93,7 @@ const Services = () => {
                     flexDir={{ base: 'column', md: 'row', lg: 'row' }}
                 >
                     {Images.map((data) => (
-                        <Box position="relative" w="180px" h="120px" borderRadius="3xl" overflow="hidden" mt="30px">
+                        <Box position="relative" w="180px" h="120px" borderRadius="3xl" overflow="hidden" mt="30px" >
                             <Image
                                 src={img}
                                 alt={data.title}
@@ -136,37 +140,34 @@ const Services = () => {
                 </HStack></HStack>
 
             <Box
-
                 display="flex"
-                gap={10}
-                flexWrap="nowrap"
+                gap='20px'
                 justifyContent="flex-start"
                 alignItems="center"
-                flexGrow={1}
-                overflow="hidden"
+                overflowX="auto"
+                px={4}
             >
                 {Imagecircle.map((data) => (
                     <Box
                         key={data.id}
-                        mt='30px'
-                        position="relative"
-                        borderRadius="md"
+                        mt="20px"
+                        w="110px"
+                        h="110px"
+                        borderRadius="full"
                         overflow="hidden"
-
-                        flexShrink={1}     // allow shrinking if container is smaller
+                        flexShrink={0}
                     >
                         <Image
                             src={img}
                             alt={data.title}
-                            w="100px"
-                            h="100px"
+                            boxSize="100%" // ✅ Ensures width and height match parent
                             objectFit="cover"
-                            borderRadius='full'
+                            borderRadius="full" // ✅ Redundant but safe
                         />
-
                     </Box>
                 ))}
             </Box>
+
             <Box  >
                 <HStack mt='30px' mb='30px' flexDir={{ base: 'column', md: 'row', lg: 'row' }}>
                     <Text> Filters</Text>
@@ -183,11 +184,10 @@ const Services = () => {
                             <Portal>
                                 <Menu.Positioner>
                                     <Menu.Content>
-                                        <Menu.Item value="new-txt">New Text File</Menu.Item>
-                                        <Menu.Item value="new-file">New File...</Menu.Item>
-                                        <Menu.Item value="new-win">New Window</Menu.Item>
-                                        <Menu.Item value="open-file">Open File...</Menu.Item>
-                                        <Menu.Item value="export">Export</Menu.Item>
+                                        <Menu.Item value="new-txt">All</Menu.Item>
+                                        <Menu.Item value="new-file">A-Z</Menu.Item>
+                                        <Menu.Item value="new-win">Z-A</Menu.Item>
+                                        <Menu.Item value="open-file">Near by</Menu.Item>
                                     </Menu.Content>
                                 </Menu.Positioner>
                             </Portal>
@@ -206,9 +206,10 @@ const Services = () => {
                             <Portal>
                                 <Menu.Positioner>
                                     <Menu.Content>
+                                        <Menu.Item value="new-txt">All</Menu.Item>
                                         <Menu.Item value="new-txt">Male</Menu.Item>
                                         <Menu.Item value="new-file"> Female</Menu.Item>
-                                        <Menu.Item value="new-file"> Children</Menu.Item>
+                                        <Menu.Item value="new-file"> UniSex</Menu.Item>
 
                                     </Menu.Content>
                                 </Menu.Positioner>

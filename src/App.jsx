@@ -10,7 +10,11 @@ import Reviews from './assets/components/ServiceTabs/Reviews'
 import AboutUs from './assets/components/ServiceTabs/AboutUs'
 import SpaModal from './assets/components/ContainerWraper/SpaModal'
 import SalonPage from './assets/components/SalonPage'
-
+import SlickCarousel from './assets/components/ContainerWraper/SlickCarousel'
+import TabNavigation from './assets/components/ContainerWraper/TabNavigation'
+import CardCarousel from './assets/components/ContainerWraper/CardCarousel'
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const App = () => {
   return (
@@ -26,6 +30,9 @@ const App = () => {
         <Route path='/aboutus' element={< AboutUs />} />
         <Route path='/modal' element={< SpaModal />} />
         <Route path='/services/salon' element={< SalonPage />} />
+        <Route path='/slickcarousel' element={< SlickCarousel />} />
+        <Route path='/tabnavigation' element={< TabNavigation />} />
+        <Route path='/cardcarousel' element={< CardCarousel />} />
 
 
       </Routes>

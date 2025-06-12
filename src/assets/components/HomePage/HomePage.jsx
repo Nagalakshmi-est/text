@@ -41,8 +41,8 @@ const HomePage = () => {
 
     const navigate = useNavigate()
     return (<>
-        <ContainerWrapper>
-            <Navbar />
+
+        <Navbar /><ContainerWrapper>
             <Flex justify="center" mt={{ base: '60px', md: '100px', lg: '100px' }}>
 
                 <HStack

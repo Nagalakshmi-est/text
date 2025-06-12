@@ -29,6 +29,8 @@ import slide1 from '../Images/Cosmotic.png'
 import slide2 from '../Images/Cosmotic.png'
 import slide3 from '../Images/Cosmotic.png'
 import OfferCarousel from './ContainerWraper/OfferCarousel'
+import TabNavigation from './ContainerWraper/TabNavigation'
+import CardCarousel from './ContainerWraper/CardCarousel'
 
 
 const images = [slide1, slide2, slide3];
@@ -68,83 +70,16 @@ const SpaDetails = () => {
                             </HStack>
                             <Box borderBottom="2px dashed  #d3d3d3" width="100%" my={4} />
 
-                            {/* <HStack gap={4}  >
-                                <Box border="2px solid #d3d3d3"
-                                    borderRadius="2xl"
-                                    height="90px"
-                                    width="480px"
-                                    display="flex"
-                                    alignItems="center"
-                                    paddingLeft="16px">
-                                    <Image src={UseCode} h='50px' />
 
-                                    <VStack align='flex-start' p='20px'><Text fontSize='xl' fontWeight='medium'> Use Code
-
-                                        <span style={{ fontWeight: 'bold' }}> Dsaloon</span> </Text>
-                                        <Text color='gray'>Get &#8377;500 off on orders above 100/- </Text>
-                                    </VStack>
-                                </Box>
-                                <Box border="2px solid #d3d3d3"
-                                    borderRadius="2xl"
-                                    height="90px"
-                                    width="480px"
-                                    display="flex"
-                                    alignItems="center"
-                                    paddingLeft="16px">
-                                    <Image src={UseCode} h='50px' />
-
-                                    <VStack align='flex-start' p='20px'>
-                                        <Text fontSize='xl' fontWeight='medium'> Use Code
-
-                                            <span style={{ fontWeight: 'bold' }}> Dsaloon</span> </Text>
-                                        <Text color='gray'>Get &#8377;500 off on orders above 100/- </Text>
-                                    </VStack>
-                                </Box>
-
-
-                            </HStack> */}
-
+                            {/* <CardCarousel /> */}
 
                             <OfferCarousel />
+                            {/* <SlickCarousel /> */}
                         </VStack>
                     </Box>
-                    <Tabs.Root defaultValue="services" mt='40px' >
-                        <Box bg='white' p='20px' boxShadow='xl' borderRadius='xl' >  <Tabs.List>
-
-                            <Tabs.Trigger value="services" >
-                                Services
-                            </Tabs.Trigger>
-                            <Tabs.Trigger value="doc">
-                                Doc&Staff
-                            </Tabs.Trigger>
-                            <Tabs.Trigger value="gallery">
-                                Gallery
-                            </Tabs.Trigger>
-                            <Tabs.Trigger value="reviews">
-                                Reviews
-                            </Tabs.Trigger>
-                            <Tabs.Trigger value="about">
-                                About Us
-                            </Tabs.Trigger>
-
-                        </Tabs.List></Box>
-
-                        <Tabs.Content value="services">
-
-                            <ServiceDetails />
-
-                        </Tabs.Content>
-                        <Tabs.Content value="doc"><DocStaff /></Tabs.Content>
-                        <Tabs.Content value="gallery">
-                            <GalleryTab />
-                        </Tabs.Content>
-                        <Tabs.Content value="reviews">
-                            <Reviews />
-                        </Tabs.Content>  <Tabs.Content value="about">
-                            <AboutUs />                    </Tabs.Content>
-                    </Tabs.Root>
 
 
+                    <TabNavigation />
                 </Box></ContainerWrapper>
         </>
     )
