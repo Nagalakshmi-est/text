@@ -41,8 +41,8 @@ const SpaDetails = () => {
             <Navbar />
 
             <ContainerWrapper>
-                <Box mt='50px' >
-                    <Box >
+                <Box  >
+                    <Box mt='80px'>
 
                         <ImageCarousel images={images} />
 
@@ -80,7 +80,9 @@ const SpaDetails = () => {
 
 
                     <TabNavigation />
-                </Box></ContainerWrapper>
+                </Box>
+
+            </ContainerWrapper>
         </>
     )
 }

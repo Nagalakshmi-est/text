@@ -39,27 +39,27 @@ const Navbar = () => {
                 <HStack spacing={10} gap={8}>
                     <Flex align="center" gap={2}>
                         <FiHome />
-                        <Text fontSize="18px" fontWeight="90px">Home</Text>
+                        <Text fontSize="16px" fontWeight='medium'>Home</Text>
                     </Flex>
 
                     <Flex align="center" gap={2}>
                         <FiSearch />
-                        <Text fontSize="18px" fontWeight='medium' >Search</Text>
+                        <Text fontSize="16px" fontWeight='medium' >Search</Text>
                     </Flex>
 
                     <Flex align="center" gap={2}>
                         <Image src={reelImg} w="20px" alt="Reels" />
-                        <Text fontSize="18px" fontWeight="500">Reels</Text>
+                        <Text fontSize="16px" fontWeight='medium' >Reels</Text>
                     </Flex>
 
                     <Flex align="center" gap={2}>
                         <FiShoppingCart />
-                        <Text fontSize="18px" fontWeight="500">Cart</Text>
+                        <Text fontSize="16px" fontWeight='medium' >Cart</Text>
                     </Flex>
 
                     <Flex align="center" gap={2}>
                         <FiUser />
-                        <Text fontSize="18px" fontWeight="500">Login</Text>
+                        <Text fontSize="16px" fontWeight='medium' >Login</Text>
                     </Flex>
                 </HStack>
             </Flex>

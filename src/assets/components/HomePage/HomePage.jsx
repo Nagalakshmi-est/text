@@ -32,7 +32,7 @@ import Navbar from '../Navbar';
 import { useNavigate } from 'react-router-dom';
 import ContainerWrapper from '../ContainerWraper/ContainerWraper';
 import ImageCarousel from '../ContainerWraper/ImageCarousel';
-import slide1 from "../../Images/Group.png";
+import slide1 from "../../Images/Banner.png";
 import slide2 from "../../Images/Group.png";
 import slide3 from "../../Images/Group.png";
 const images = [slide1, slide2, slide3];
@@ -133,7 +133,8 @@ const HomePage = () => {
 
         </ContainerWrapper>
 
-        <BeautyCards /></>
+        <BeautyCards />
+    </>
     );
 };
 

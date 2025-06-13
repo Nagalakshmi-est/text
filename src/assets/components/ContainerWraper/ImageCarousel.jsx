@@ -17,7 +17,7 @@ const ImageCarousel = ({ images = [], delay = 4000, loop = true }) => {
                 }}
                 modules={[Autoplay]}
                 style={{
-                    borderRadius: "40px", // 4xl = 32px
+                    borderRadius: "40px",
                     overflow: "hidden"
                 }}
             >
@@ -26,8 +26,8 @@ const ImageCarousel = ({ images = [], delay = 4000, loop = true }) => {
                         <Image
                             src={img}
                             alt={`Slide ${index + 1}`}
-                            w="100%"
-                            h="300px"
+                            w="1280px"
+                            h="290px"
                             objectFit="cover"
                             borderRadius="0" // don't round here
                         />

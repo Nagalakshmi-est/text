@@ -13,7 +13,7 @@ const AboutUs = () => {
                         <Text color='#64748B' mt='20px'>At Oasis Spa Haven, we specialize in providing a serene escape from the hustle and bustle of everyday life. Nestled in the heart of Relaxation Town, our spa offers a sanctuary where guests can unwind, rejuvenate, and indulge in luxurious pampering. </Text>
                         <Text color='#64748B' mt='20px'>From soothing massages and rejuvenating facials to revitalizing body treatments, our skilled therapists tailor each experience to promote relaxation, balance, and well-being. Step into our Oasis Spa Haven and embark on a journey of blissful relaxation and renewal.</Text>
 
-                    </Box><Box borderRadius='2xl' background='white' boxShadow='xl' w='450px' h='300px'>
+                    </Box><Box borderRadius='2xl' background='white' boxShadow='md' w='450px' h='300px'>
                         <Stack p='40px'>
                             <Text fontWeight='bold' fontSize='xl' >Working Hours</Text>
                             <Text mt='10px'> Monday  : 10am-9pm</Text>
