@@ -75,6 +75,7 @@ const Services = () => {
 
 
 
+
             <Box  >
                 <HStack mt='20px' flexDir={{ base: 'column', md: 'row', lg: 'row' }}><Text fontWeight='700' font='Lato '
                     fontSize='30px'>Services</Text>
