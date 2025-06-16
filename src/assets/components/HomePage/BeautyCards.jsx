@@ -226,13 +226,12 @@ const BeautyCards = () => {
                             <Box p="4" >
                                 <VStack align="start" spacing={2}>
 
-                                    <HStack>
-                                        <Text fontWeight="medium" color="fg"> {dev.title}    </Text>
 
+                                    <HStack w="100%">
+                                        <Text fontWeight="medium" color="fg">{dev.title}</Text>
                                         <Spacer />
-                                        <GoHeartFill color="#B7995B" style={{ marginLeft: '90px' }} size='26px' />
+                                        <GoHeartFill color="#B7995B" size="24px" />
                                     </HStack>
-
 
                                     <Text color='gray.400'>{dev.address}</Text>
                                     <HStack>

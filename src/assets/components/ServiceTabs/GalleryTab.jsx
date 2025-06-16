@@ -34,24 +34,73 @@ const reelsData = [
 
 const GalleryTab = () => {
     return (
-        <Tabs.Root defaultValue="all" variant="plain" >
+        <Tabs.Root defaultValue="all" variant="unstyled" isFitted >
             <Box display="flex" justifyContent="center" mt={4} >
-                <Tabs.List bg='white' rounded="l3" p="2" w="600px" justifyContent='space-evenly' boxShadow='lg'>
-                    <Tabs.Trigger value="all" w='150px' display="flex"
+                <Tabs.List
+                    bg="white"
+                    rounded="lg"
+                    boxShadow="lg"
+                    display="flex"
+                    width="600px"
+                    height="48px"
+                    overflow="hidden">
+                    <Tabs.Trigger value="all"
+                        flex="1"
+                        height="100%"
+                        display="flex"
                         alignItems="center"
-                        justifyContent="center">All</Tabs.Trigger>
-                    <Tabs.Trigger value="reels" w='150px' display="flex"
+                        justifyContent="center"
+                        fontWeight="medium"
+                        fontSize="sm"
+                        color="gray.500"
+                        _selected={{
+                            color: "white",
+                            bg: "none",
+                            background:
+                                "linear-gradient(90deg, rgba(91,76,45,1) 0%, rgba(193,161,95,1) 100%)",
+                        }}
+                        borderRadius="md"
+                    >All</Tabs.Trigger>
+                    <Tabs.Trigger value="reels"
+                        flex="1"
+                        height="100%"
+                        display="flex"
                         alignItems="center"
-                        justifyContent="center">Reels</Tabs.Trigger>
-                    <Tabs.Trigger value="tasks" w='150px' display="flex"
+                        justifyContent="center"
+                        fontWeight="medium"
+                        fontSize="sm"
+                        color="gray.500"
+                        _selected={{
+                            color: "white",
+                            bg: "none",
+                            background:
+                                "linear-gradient(90deg, rgba(91,76,45,1) 0%, rgba(193,161,95,1) 100%)",
+                        }}
+                        borderRadius="md"
+                    >Reels</Tabs.Trigger>
+                    <Tabs.Trigger value="tasks"
+                        flex="1"
+                        height="100%"
+                        display="flex"
                         alignItems="center"
-                        justifyContent="center">Images</Tabs.Trigger>
+                        justifyContent="center"
+                        fontWeight="medium"
+                        fontSize="sm"
+                        color="gray.500"
+                        _selected={{
+                            color: "white",
+                            bg: "none",
+                            background:
+                                "linear-gradient(90deg, rgba(91,76,45,1) 0%, rgba(193,161,95,1) 100%)",
+                        }}
+                        borderRadius="md"
+                    >Images</Tabs.Trigger>
                     <Tabs.Indicator rounded="l2" bg="#C1A15F" />
                 </Tabs.List>
             </Box>
 
-            <Tabs.Content value="all">
-                <Box display="flex" flexWrap="wrap" gap={4} justifyContent='left'>
+            <Tabs.Content value="all" mt='10px' >
+                <Box display="flex" flexWrap="wrap" gap={4} justifyContent='left' >
                     {allData.map(({ id, src }) => (<>
                         <Image src={images} width="150px" height="150px" borderRadius="lg" />
                         <Box key={id} position="relative" width="150px" height="150px" overflow="hidden" borderRadius="lg" boxShadow="md">
@@ -71,7 +120,7 @@ const GalleryTab = () => {
                 </Box>
             </Tabs.Content>
 
-            <Tabs.Content value="reels">
+            <Tabs.Content value="reels" mt='10px'>
                 <Box display="flex" flexWrap="wrap" gap={4} justifyContent="left">
                     {reelsData.map(({ id, src }) => (
                         <Box key={id} position="relative" width="150px" height="150px" overflow="hidden" borderRadius="lg" boxShadow="md">
@@ -91,7 +140,7 @@ const GalleryTab = () => {
                 </Box>
             </Tabs.Content>
 
-            <Tabs.Content value="tasks">
+            <Tabs.Content value="tasks" mt='10px'>
                 <Box textAlign="center" mt={4}>Manage your tasks for freelancers</Box>
             </Tabs.Content>
         </Tabs.Root>

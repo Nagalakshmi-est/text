@@ -28,6 +28,8 @@ import beauty from '../../Images/beauty.png'
 // import group from '../../Images/Group.png'
 import BeautyCards from './BeautyCards';
 import { FaArrowRightLong } from "react-icons/fa6";
+import { IoCaretDownOutline } from "react-icons/io5";
+
 import Navbar from '../Navbar';
 import { useNavigate } from 'react-router-dom';
 import ContainerWrapper from '../ContainerWraper/ContainerWraper';
@@ -50,20 +52,48 @@ const HomePage = () => {
                     maxW="600px"
                     w="100%"
                 >
-                    <InputGroup startElement={<GrLocation color="#8B4513" />} >
+                    {/* <InputGroup startElement={<GrLocation color="#8B4513" />} >
                         <Input placeholder="1208,Spline Arcade,flat no1..." borderRadius='lg' w='250px' background='gray.100' _placeholder={{ color: "#8B4513" }} />
-                    </InputGroup>
+                    </InputGroup> */}
+                    <Box position="relative" maxW="300px" mx="auto">
+                        {/* Input */}
+                        <Input
+                            placeholder="1208,Spline Arcade,flat no1..." pl="35px"
+                            borderRadius='lg' w='250px' background='gray.100' _placeholder={{ color: "#8B4513" }}
+                        />
+
+                        {/* Left Icon */}
+                        <Box position="absolute" top="10px" left="10px" fontSize="18px" color="gray.500">
+                            <GrLocation color="#8B4513" />
+                        </Box>
+
+                        {/* Right Icon */}
+                        <Box position="absolute" top="12px" right="10px" fontSize="18px" color="gray.500">
+                            <IoCaretDownOutline color="#8B4513" />
+                        </Box>
+                    </Box>
 
                     <InputGroup startElement={<LuSearch />} w={{ base: '200px', md: '300px', lg: '900px' }}>
                         <Input placeholder="Search Services..." borderRadius='lg' background='white' />
                     </InputGroup>
+
+
+
+
+
+
+
+
+
+
+
                 </HStack>
             </Flex>
 
 
-            <Box w="100%" mx="auto" mt="60px" >
+            <Box w="100%" mx="auto" mt="60px"  >
                 <HStack gap='80px' flexDir={{ base: 'column', md: 'row' }}>
-                    <Card.Root width={{ base: '300px', md: '360px', lg: "360px" }} height={{ base: '170px', md: '210px', lg: "170px" }} borderRadius="4xl" onClick={() => navigate('/services')}>
+                    <Card.Root width={{ base: '300px', md: '360px', lg: "360px" }} height={{ base: '170px', md: '210px', lg: "170px" }} borderRadius="4xl" onClick={() => navigate('/services')} bg='white' color='black'>
                         <Card.Body gap="5px">
                             <Stack
                                 direction={{ base: 'row', md: 'column', lg: 'row' }}
@@ -81,7 +111,7 @@ const HomePage = () => {
                     </Card.Root>
 
 
-                    <Card.Root width={{ base: '300px', md: '360px', lg: "360px" }} height={{ base: '170px', md: '210px', lg: "170px" }} borderRadius="4xl" onClick={() => navigate('/services')}>
+                    <Card.Root width={{ base: '300px', md: '360px', lg: "360px" }} height={{ base: '170px', md: '210px', lg: "170px" }} borderRadius="4xl" onClick={() => navigate('/services')} bg='white' color='black'>
                         <Card.Body gap="5px">
                             <Stack
                                 direction={{ base: 'row', md: 'column', lg: 'row' }}
@@ -99,7 +129,7 @@ const HomePage = () => {
                         </Card.Body>
                     </Card.Root>
 
-                    <Card.Root width={{ base: '300px', md: '360px', lg: "360px" }} height={{ base: '170px', md: '210px', lg: "170px" }} borderRadius="4xl" onClick={() => navigate('/services')}>
+                    <Card.Root width={{ base: '300px', md: '360px', lg: "360px" }} height={{ base: '170px', md: '210px', lg: "170px" }} borderRadius="4xl" onClick={() => navigate('/services')} bg='white' color='black'>
                         <Card.Body gap="5px">
                             <Stack
                                 direction={{ base: 'row', md: 'column', lg: 'row' }}

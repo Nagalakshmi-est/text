@@ -19,3 +19,9 @@
     background-color: #5e4325;
     /* Darker brown for active dot */
 }
+
+/* Make sure SwiperSlide clones also get border-radius */
+.swiper-slide>div {
+    border-radius: 40px;
+    overflow: hidden;
+}

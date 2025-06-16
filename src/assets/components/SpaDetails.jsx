@@ -25,28 +25,32 @@ import AboutUs from './ServiceTabs/AboutUs'
 import ImageCarousel from './ContainerWraper/ImageCarousel'
 import ContainerWrapper from './ContainerWraper/ContainerWraper'
 
-import slide1 from '../Images/Cosmotic.png'
-import slide2 from '../Images/Cosmotic.png'
-import slide3 from '../Images/Cosmotic.png'
+// import slide1 from '../Images/Cosmotic.png'
+// import slide2 from '../Images/Cosmotic.png'
+// import slide3 from '../Images/Cosmotic.png'
+
 import OfferCarousel from './ContainerWraper/OfferCarousel'
 import TabNavigation from './ContainerWraper/TabNavigation'
 import CardCarousel from './ContainerWraper/CardCarousel'
+import PicCarousel from './ContainerWraper/PicCarousel'
 
 
-const images = [slide1, slide2, slide3];
+// const images = [slide1, slide2, slide3];
 
 const SpaDetails = () => {
     return (
         <>
             <Navbar />
+            <CardCarousel />
+
 
             <ContainerWrapper>
                 <Box  >
-                    <Box mt='80px'>
 
-                        <ImageCarousel images={images} />
+                    {/* <ImageCarousel images={images} /> */}
 
-                    </Box>
+                    {/* <PicCarousel /> */}
+
                     <Box mt='20px' bg='White' borderRadius='3xl' p='20px' boxShadow="md" >
                         <VStack align='flex-start'>
                             <HStack>

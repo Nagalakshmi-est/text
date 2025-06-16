@@ -15,6 +15,7 @@ import TabNavigation from './assets/components/ContainerWraper/TabNavigation'
 import CardCarousel from './assets/components/ContainerWraper/CardCarousel'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import PicCarousel from './assets/components/ContainerWraper/PicCarousel'
 
 const App = () => {
   return (
@@ -33,6 +34,8 @@ const App = () => {
         <Route path='/slickcarousel' element={< SlickCarousel />} />
         <Route path='/tabnavigation' element={< TabNavigation />} />
         <Route path='/cardcarousel' element={< CardCarousel />} />
+        <Route path='/piccarousel' element={< PicCarousel />} />
+
 
 
       </Routes>

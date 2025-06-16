@@ -10,7 +10,7 @@
     background-attachment: fixed;
 
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.40) 0%, rgba(193, 161.19, 95.44, 0.40) 70%), white;
- 
+
 
     height: 100vh;
     min-height: auto;
@@ -19,23 +19,21 @@
     width: 100%;
     color: #333333;
 
+
+
 } */
-
-
-
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background:
         linear-gradient(0deg,
             rgba(255, 255, 255, 1) 0%,
-            rgba(255, 255, 255, 0.40) 30%,
-            rgba(193, 161.19, 95.44, 0.40) 70%),
+            rgba(255, 255, 255, 0.40) 60%,
+            rgba(193, 161.19, 95.44, 0.40) 100%),
         url('../src/assets/Images/BgImage.png'),
         white;
 
     background-repeat: no-repeat;
-    /* background-position: bottom center; */
     background-size: 100% auto;
     background-attachment: scroll;
     background-position: center bottom -60px;

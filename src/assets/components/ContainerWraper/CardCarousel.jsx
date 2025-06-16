@@ -1,67 +1,53 @@
-// rafce - CardCarousel.jsx
-import React from 'react';
-import { Box, Image, Text, VStack } from '@chakra-ui/react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
-import usecode from '../../Images/UseCode.png';
-
-import 'swiper/css';
-import 'swiper/css/pagination';
-
-const cardData = [
-    { id: 1, title: 'Relaxing Spa', image: usecode },
-    { id: 2, title: 'Luxury Massage', image: 'https://picsum.photos/id/1015/200/150' },
-    { id: 3, title: 'Aroma Therapy', image: 'https://picsum.photos/id/1016/200/150' },
-    { id: 4, title: 'Facial Glow', image: 'https://picsum.photos/id/1019/200/150' },
-
-];
+import { Box, Image } from "@chakra-ui/react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
+import slide1 from "../../Images/Massage.png";
+import ContainerWrapper from "./ContainerWraper";
 
 const CardCarousel = () => {
+    const images = [slide1, slide1, slide1];
+
     return (
-        <VStack spacing={6} w="100%" maxW="1200px" mx="auto" py={10}>
+        // <Box w="100%" maxW="1350px" px={{ base: 2, md: 4, lg: 1 }} borderRadius="60px" overflow="hidden">
+        <ContainerWrapper >
             <Swiper
-                modules={[Autoplay, Pagination]}
+                spaceBetween={30}
+                slidesPerView={1.5}
+                loop={true}
                 autoplay={{
-                    delay: 1500,
+                    delay: 3500,
                     disableOnInteraction: false,
                 }}
-                loop={true}
-                slidesPerView={2}
-                spaceBetween={20}
-                pagination={{ clickable: true }}
-                breakpoints={{
-                    320: { slidesPerView: 1 },
-                    480: { slidesPerView: 2 },
-                    768: { slidesPerView: 3 },
-                    1024: { slidesPerView: 4 },
+                modules={[Autoplay]}
+                style={{
+                    padding: "10px",
+                    borderRadius: "50px",
+                    marginTop: '60px'
                 }}
-                style={{ width: '100%' }}
             >
-                {cardData.map((card) => (
-                    <SwiperSlide key={card.id}>
+                {images.map((imgUrl, index) => (
+                    <SwiperSlide key={index}>
                         <Box
-                            bg="white"
-                            borderRadius="md"
-                            boxShadow="sm"
-                            textAlign="center"
-                            p={2}
+                            w="100%"
+                            h="auto"
+                            overflow="hidden"
+                            bg="white" borderRadius="50px"
+
                         >
                             <Image
-                                src={card.image}
-                                alt={card.title}
-                                borderRadius="md"
+                                src={imgUrl}
+                                alt={`carousel-slide-${index}`}
                                 w="100%"
-                                h="120px"
-                                objectFit="cover"
+                                h="290px"
+                                borderRadius="inherit"
+                                fallbackSrc="https://placehold.co/600x230?text=Image+Not+Found"
                             />
-                            <Text fontSize="sm" fontWeight="semibold" mt={2}>
-                                {card.title}
-                            </Text>
                         </Box>
                     </SwiperSlide>
                 ))}
-            </Swiper>
-        </VStack>
+            </Swiper></ContainerWrapper>
+        // </Box>
     );
 };
 
