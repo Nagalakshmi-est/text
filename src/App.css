@@ -33,7 +33,7 @@ body {
         url('../src/assets/Images/BgImage.png'),
         white;
 
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: 100% auto;
     background-attachment: scroll;
     background-position: center bottom -60px;

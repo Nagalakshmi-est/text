@@ -207,19 +207,22 @@ const BeautyCards = () => {
                                 {/* Glass Effect Text (Positioned Over Black Background) */}
                                 <Box
                                     position="absolute"
-                                    bottom="15px"  // Adjust to move up/down
+                                    bottom="6px"  // Adjust to move up/down
                                     left="15px"   // Adjust to move left/right
                                     color="#25B701"
-                                    fontSize="sm"
-                                    px="3px"
-                                    py="2px"
-                                    borderRadius="md"
-                                    bg="rgba(255, 255, 255, 0.01)" backdropFilter="blur(1px)"       // Frosted effect
+                                    fontSize="13px"
+                                    px="6px"
+                                    py="1px"
+                                    w='260px'
+                                    borderRadius="xl"
+                                    // bg="rgba(55, 150, 48, 0.01)"
+                                    bg='rgba(255, 255, 255, 0.1)'
+                                    backdropFilter="blur(0.1px)"
                                 >
                                     <HStack>
 
-                                        <Image src={offerImg} />
-                                        Flat 10% Off above value of 200
+                                        <Image src={offerImg} height='12px' />
+                                        <Text>Flat 10% Off above value of 200</Text>
 
                                     </HStack>                                </Box>
                             </Box>
@@ -238,6 +241,7 @@ const BeautyCards = () => {
                                         <HStack gap="1" fontWeight="medium">
                                             <Icon color="orange.400">
                                                 <HiStar />
+
                                             </Icon>
                                             <Text>
                                                 {dev.rating}

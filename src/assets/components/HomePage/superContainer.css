@@ -1,0 +1,12 @@
+.super-container {
+    background-image: url('../src/assets/Images/BgEditedImage.png');
+    background-size: cover;
+    background-position: center;
+    filter: contrast(1.2) brightness(0.9);
+    position: relative;
+}
+
+.laptop {
+    position: absolute;
+    height: 200px;
+}

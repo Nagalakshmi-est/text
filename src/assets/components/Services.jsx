@@ -76,7 +76,8 @@ const Services = () => {
 
 
             <Box  >
-                <HStack mt='20px' flexDir={{ base: 'column', md: 'row', lg: 'row' }}><Text fontWeight='bold' fontSize='30px'>Services</Text>
+                <HStack mt='20px' flexDir={{ base: 'column', md: 'row', lg: 'row' }}><Text fontWeight='700' font='Lato '
+                    fontSize='30px'>Services</Text>
                     <Spacer />
                     <HStack> <Text fontSize='20px'>View all</Text>
                         <FaArrowRightLong />
@@ -141,11 +142,10 @@ const Services = () => {
 
             <Box
                 display="flex"
-                gap='20px'
+                gap='30px'
                 justifyContent="flex-start"
                 alignItems="center"
-                overflowX="auto"
-                px={4}
+                bg='white'
             >
                 {Imagecircle.map((data) => (
                     <Box
@@ -154,15 +154,14 @@ const Services = () => {
                         w="110px"
                         h="110px"
                         borderRadius="full"
-                        overflow="hidden"
                         flexShrink={0}
                     >
                         <Image
                             src={img}
                             alt={data.title}
-                            boxSize="100%" // ✅ Ensures width and height match parent
+                            boxSize="100%"
                             objectFit="cover"
-                            borderRadius="full" // ✅ Redundant but safe
+                            borderRadius="full"
                         />
                     </Box>
                 ))}

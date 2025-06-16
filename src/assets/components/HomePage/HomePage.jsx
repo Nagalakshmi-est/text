@@ -72,7 +72,6 @@ const HomePage = () => {
                             <IoCaretDownOutline color="#8B4513" />
                         </Box>
                     </Box>
-
                     <InputGroup startElement={<LuSearch />} w={{ base: '200px', md: '300px', lg: '900px' }}>
                         <Input placeholder="Search Services..." borderRadius='lg' background='white' />
                     </InputGroup>
